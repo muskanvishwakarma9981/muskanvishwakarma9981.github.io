@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif;
+}
+body{
+    overflow-x: hidden;
+    
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.sidebar{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(
+        106.37deg,
+        #ffe1bc 29.63%,
+        #ffcfd1 51.55%,
+        #f3c6f1 90.85%
+      );
+      overflow-x: hidden;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      z-index: 2 ;
+}
+.sidebar ul li {
+    width: 100%;
+    list-style: none;
+}
+.sidebar ul li :hover {
+    background: #f3c6f1;
+}
+.sidebar ul li:first-child{
+    line-height: 60px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid black ;
+}
+.sidebar ul li:first-child :hover {
+ background: none;
+}
+.sidebar ul li a{
+    width: 100%;
+    text-decoration: none;
+    color:black;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.sidebar ul li i{
+    min-width: 60px;
+    font-size: 24px;
+    text-align: center;
+}
+.sidebar .title {
+    padding: 0 10px;
+    font-size: 20px;
+}
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    min-height: 100vh;
+    left: 300px;
+    background: #f4eaf0;
+}
+.top-bar{
+    position: fixed;
+    height: 60px;
+    /* width: calc(100%-300px); */
+    width: 77%;
+    background: #FFB6D9;
+    display: grid;
+    grid-template-columns: 10fr 0.4fr 1fr;
+    grid-gap: 5px;
+    align-items: center;
+    color: #f3c6f1;
+    /* margin-left: 2px; */
+    padding: 0 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.top-bar .search {
+    position: relative;
+    max-width: 400px;
+}
+.search input{
+    width: 100%;
+    min-width: 128px;
+    height: 40px;
+    padding: 0 40px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    background: #f5f5f5 ;
+
+}
+.search i {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+}
+.user{
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius:50% ;
+}
+.cards{
+    margin-top: 60px;
+    width: 100%;
+    height: 150px;
+    padding: 35px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    /* border-radius: 2px; */
+}
+.cards .card{
+    background: linear-gradient(
+      45deg,
+       #F19ED2 51.12%,
+      #FFFF80 92%
+     );
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     box-shadow: #FFFF80;
+     border-radius: 13px;
+
+}
+.number{
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 12px;
+    color: whitesmoke;
+}
+.card-name{
+    color:black;
+    font-size: 19px;
+    padding-left: 10px;
+}
+.icon-box{
+    font-size: 35px;
+    padding-right: 10px ;
+}
+.tables{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    grid-gap: 20px;
+    align-items: self-start;
+    padding: 0 20px 20px 20px;
+}
+.img-box-small{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    overflow: hidden;
+}
+.last-appointment{
+    min-height: 350px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+} 
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #444
+}
+.doctor-visiting{
+    min-height: 350px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.btn{
+    padding: 5px 10px;
+    background: linear-gradient(
+      45deg,
+       #F19ED2 51.12%,
+      #FFFF80 92%
+     );
+     border-radius:5px ;
+     text-decoration: none;
+     text-align: center;
+}
+table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+thead td {
+    font-weight: 500;
+    color: #333;
+}
+table tr{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+table tbody tr:hover{
+    background-color: #444;
+    color: #f5eaea;
+}
+table tbody tr:last-child{
+    border-bottom: none;
+}
+td {
+    padding: 8px 5px;
+}
+td i {
+    padding: 7px;
+    color: #fff;
+    border-radius: 50px;
+}
+.last-appointment table tbody td:last-child {
+    white-space: nowrap;
+}
+.fa-eye{
+    background: #68D2E8;
+}
+.fa-edit{
+    background-color: #03AED2;
+}
+.fa-trash-alt{
+    background-color: #F19ED2;
+}
+
